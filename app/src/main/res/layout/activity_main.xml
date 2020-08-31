@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnNone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/spacing_xs"
+            android:paddingBottom="@dimen/spacing_xs">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/blue_8"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card3"
+                app:layout_constraintStart_toEndOf="@+id/card1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintStart_toEndOf="@+id/card2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/blue_8"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card3"
+                app:layout_constraintStart_toEndOf="@+id/card1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/yellow"
+                app:cardCornerRadius="@dimen/radius_size_l"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintStart_toEndOf="@+id/card2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="card1, card2, card3, card4, card5, card6, card7"
+                app:flow_horizontalGap="20dp"
+                app:flow_verticalGap="20dp"
+                app:flow_verticalStyle="packed"
+                android:paddingBottom="@dimen/spacing_xs"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNone"
+        style="@style/IG.Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size_xxxl"
+        android:layout_margin="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:text="@string/none"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAligned"/>
+
+    <Button
+        android:id="@+id/btnAligned"
+        style="@style/IG.Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size_xxxl"
+        android:layout_margin="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:text="@string/aligned"
+        app:layout_constraintStart_toEndOf="@+id/btnNone"
+        app:layout_constraintEnd_toStartOf="@+id/btnChain"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart" />
+
+    <Button
+        android:id="@+id/btnChain"
+        style="@style/IG.Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size_xxxl"
+        android:layout_margin="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:text="@string/chain"
+        app:layout_constraintStart_toEndOf="@+id/btnAligned"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/IG.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_xxxl"
+        android:layout_margin="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

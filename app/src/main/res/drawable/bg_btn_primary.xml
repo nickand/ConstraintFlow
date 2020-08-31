@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:drawable="@drawable/bg_btn_shadow" android:top="@dimen/spacing_xs" />
+            <item android:bottom="@dimen/spacing_xxxxs" android:left="@dimen/spacing_xxxs" android:right="@dimen/spacing_xxxs" android:top="@dimen/spacing_xxxs">
+                <shape>
+                    <solid android:color="@color/blue_8" />
+                    <corners android:radius="@dimen/radius_size_mxx" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:drawable="@drawable/bg_btn_shadow" android:top="@dimen/spacing_xs" />
+            <item android:bottom="@dimen/spacing_xxxxs" android:left="@dimen/spacing_xxxs" android:right="@dimen/spacing_xxxs" android:top="@dimen/spacing_xxxs">
+                <shape>
+                    <solid android:color="@color/gray_3" />
+                    <corners android:radius="@dimen/radius_size_mxx" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:drawable="@drawable/bg_btn_shadow" android:top="@dimen/spacing_xs" />
+            <item android:bottom="@dimen/spacing_xxxxs" android:left="@dimen/spacing_xxxs" android:right="@dimen/spacing_xxxs" android:top="@dimen/spacing_xxxs">
+                <shape>
+                    <solid android:color="@color/blue_8" />
+                    <corners android:radius="@dimen/radius_size_mxx" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

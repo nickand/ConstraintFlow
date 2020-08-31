@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConstraintTest</string>
+    <string name="start">START</string>
+    <string name="none">NONE</string>
+    <string name="aligned">ALIGNED</string>
+    <string name="chain">CHAIN</string>
+</resources>
